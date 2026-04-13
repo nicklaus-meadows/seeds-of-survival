@@ -34,11 +34,27 @@ img {
   width: 100%;
 }
 
+.site-header::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 16, 9, 0.58) 0%,
+      rgba(2, 16, 9, 0.34) 46%,
+      rgba(2, 16, 9, 0.48) 100%
+    ),
+    rgba(25, 59, 32, 0.14);
+  pointer-events: none;
+}
+
 .home-logo {
   position: absolute;
   top: 16px;
   left: 16px;
-  z-index: 2;
+  z-index: 3;
   display: block;
   width: 64px;
   height: 64px;
@@ -59,7 +75,7 @@ img {
   top: 18px;
   left: 104px;
   right: 18px;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -100,9 +116,23 @@ img {
 
 .hero-image {
   width: 100%;
-  height: clamp(260px, 58vw, 720px);
+  height: clamp(208px, 46.4vw, 576px);
   object-fit: cover;
   object-position: center;
+}
+
+.hero-copy {
+  position: absolute;
+  left: max(32px, calc((100% - 1040px) / 2));
+  bottom: clamp(28px, 7vw, 88px);
+  z-index: 2;
+  width: min(100% - 64px, 720px);
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 7vw, 5.75rem);
+  font-weight: 700;
+  line-height: 0.98;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.46);
 }
 
 .page-content {
@@ -148,8 +178,15 @@ img {
   }
 
   .hero-image {
-    height: 64vw;
-    min-height: 220px;
+    height: 51.2vw;
+    min-height: 176px;
+  }
+
+  .hero-copy {
+    left: 16px;
+    bottom: 22px;
+    width: min(100% - 32px, 520px);
+    font-size: clamp(1.75rem, 9vw, 2.5rem);
   }
 
   .page-content {
