@@ -181,7 +181,7 @@ img {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 40px;
-  align-items: center;
+  align-items: start;
   width: min(100% - 32px, 1040px);
   margin: 0 auto;
 }
@@ -205,10 +205,18 @@ img {
   border-radius: 8px;
   background: rgba(247, 249, 244, 0.78);
   box-shadow: 0 10px 28px rgba(23, 50, 77, 0.12);
+  cursor: pointer;
   transition:
     max-height 260ms ease,
     padding 260ms ease,
     box-shadow 260ms ease;
+}
+
+.feature-graph:hover,
+.feature-graph:focus-visible {
+  box-shadow: 0 14px 34px rgba(23, 50, 77, 0.18);
+  outline: 3px solid rgba(223, 244, 184, 0.72);
+  outline-offset: 3px;
 }
 
 .feature-button {
@@ -238,6 +246,27 @@ img {
   transform: translateY(-1px);
 }
 
+.feature-source {
+  margin: -8px 0 0;
+  color: rgba(23, 50, 77, 0.78);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.feature-source a {
+  color: #17324d;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.feature-source a:hover,
+.feature-source a:focus-visible {
+  color: #102419;
+  outline: none;
+}
+
 .feature-section.is-expanded .feature-visual {
   grid-column: 1 / -1;
 }
@@ -252,11 +281,67 @@ img {
   grid-column: 1 / -1;
 }
 
+.feature-text h3 {
+  margin-top: 0;
+}
+
 .feature-text p {
   margin: 0;
   color: #17324d;
   font-size: 1.125rem;
   line-height: 1.7;
+}
+
+.feature-text p + p {
+  margin-top: 16px;
+}
+
+.feature-text .feature-citation {
+  margin-top: 14px;
+  color: rgba(23, 50, 77, 0.78);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.feature-citation cite {
+  font-style: normal;
+}
+
+.local-section {
+  width: 100%;
+  padding: 56px 0;
+  background: #ffffff;
+}
+
+.local-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  width: min(100% - 32px, 1040px);
+  margin: 0 auto;
+}
+
+.local-text h3 {
+  margin: 0 0 14px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.local-text p {
+  margin: 0;
+  color: #17324d;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.local-image {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(23, 50, 77, 0.12);
 }
 
 @media (max-width: 640px) {
@@ -323,5 +408,19 @@ img {
   .feature-button {
     align-self: stretch;
     padding: 0 14px;
+  }
+
+  .local-section {
+    padding: 36px 0;
+  }
+
+  .local-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: min(100% - 24px, 1040px);
+  }
+
+  .local-image {
+    max-height: 70vh;
   }
 }
