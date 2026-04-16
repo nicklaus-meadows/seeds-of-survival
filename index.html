@@ -147,6 +147,113 @@
         />
       </div>
     </section>
+
+    <section class="market-game-section" aria-labelledby="market-game-title">
+      <div class="market-game-inner">
+        <div class="market-game-intro">
+          <p class="game-kicker">Market Matchup</p>
+          <h2 id="market-game-title">
+            How many of these do you purchase from a grocery store compared to
+            a local farmers market?
+          </h2>
+          <p>
+            Pick one source for each item. Farmers market picks raise your
+            local food score, grocery store picks lower it, and your grade
+            updates as you play.
+          </p>
+        </div>
+
+        <div class="market-game" data-market-game>
+          <div class="game-board" aria-label="Food source choices">
+            <div class="game-item" data-game-item>
+              <p>Tomatoes</p>
+              <div class="source-options" role="group" aria-label="Tomatoes">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Leafy Greens</p>
+              <div class="source-options" role="group" aria-label="Leafy Greens">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Berries</p>
+              <div class="source-options" role="group" aria-label="Berries">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Apples</p>
+              <div class="source-options" role="group" aria-label="Apples">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Eggs</p>
+              <div class="source-options" role="group" aria-label="Eggs">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Fresh Herbs</p>
+              <div class="source-options" role="group" aria-label="Fresh Herbs">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Potatoes</p>
+              <div class="source-options" role="group" aria-label="Potatoes">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Honey</p>
+              <div class="source-options" role="group" aria-label="Honey">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Bread</p>
+              <div class="source-options" role="group" aria-label="Bread">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+            <div class="game-item" data-game-item>
+              <p>Flowers</p>
+              <div class="source-options" role="group" aria-label="Flowers">
+                <button type="button" data-score="0">Grocery Store</button>
+                <button type="button" data-score="1">Farmers Market</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="game-score" aria-live="polite">
+            <p class="score-label">Your Grade</p>
+            <p class="score-grade" data-game-grade>--</p>
+            <p class="score-message" data-game-message>
+              Choose at least one item to start.
+            </p>
+            <div class="score-track" aria-hidden="true">
+              <span data-game-meter></span>
+            </div>
+            <p class="score-count" data-game-count>0 of 10 answered</p>
+            <button class="game-reset" type="button" data-game-reset>
+              Reset Game
+            </button>
+          </aside>
+        </div>
+      </div>
+    </section>
     <script src="sos.js"></script>
   </body>
 </html>
