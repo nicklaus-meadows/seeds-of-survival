@@ -32,6 +32,7 @@ if (marketGame) {
   const count = marketGame.querySelector("[data-game-count]");
   const meter = marketGame.querySelector("[data-game-meter]");
   const reset = marketGame.querySelector("[data-game-reset]");
+  const note = marketGame.querySelector("[data-game-note]");
 
   const getLetterGrade = (percent) => {
     if (percent >= 90) return "A";
@@ -72,6 +73,10 @@ if (marketGame) {
     message.textContent = getScoreMessage(answered, percent);
     count.textContent = `${answered} of ${gameItems.length} answered`;
     meter.style.width = `${percent}%`;
+
+    if (note) {
+      note.hidden = answered !== gameItems.length;
+    }
   };
 
   gameItems.forEach((item) => {
